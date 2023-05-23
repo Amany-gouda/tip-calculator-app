@@ -1,0 +1,238 @@
+:root{
+    /* Primary */
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    /* Neutral */
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+/* components */
+.input-number{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+   
+}
+.input-number label{
+    color: var(--Very-dark-cyan);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.input-number img{
+    position: absolute;
+    top: calc(50% + 10px);
+    left: 18px;
+}
+.input-number input{
+    border-style: none;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+.input-number input:hover{
+    border: 2px solid var(--Grayish-cyan);
+    border-radius: 5px;
+}
+.input-number input::placeholder{
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    top: 50%;
+    transform:translateY(-50%) ;
+    font-family: 'Space Mono', monospace;
+}
+.msg{
+    color: red;
+}
+.activate{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+/* no spinner component to delet the up and down arrows in the input number */
+
+      /* Works for Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        outline: none;
+        text-align: right;
+        font-family: 'Space Mono', monospace;
+        font-weight: 600;
+        color: var(--Grayish-cyan);
+        font-size: 24px;
+      }
+
+      /* Works for Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+        outline: none;
+        text-align: right;
+        font-family: 'Space Mono', monospace;
+        font-weight: 600;
+        color: var(--Grayish-cyan);
+        font-size: 24px;
+      }
+      input[type="number"].red-border{
+        border:  1px solid red;
+    }
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px 0;
+}
+
+main .container{
+    display: flex;
+    align-items: center;
+    background-color: var(--White);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80vw;
+    gap: 30px;
+    margin-top: 100px;
+}
+@media(max-width:768px){
+    main .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+}
+main .container form#input{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main .container form#input .tip-container{
+    text-align: left;
+}
+main .container form#input .tip-container label span{
+    color: var(--Very-dark-cyan);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+main .container form#input .tip-container label .buttons{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(50px,1fr));
+    gap: 10px;
+}
+main .container form#input .tip-container label .buttons .btn{
+    border-style: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+}
+main .container form#input .tip-container label .buttons .btn.activate{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+main .container form#input .tip-container label .buttons .btn:hover{
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan);
+}
+main .container form#input .tip-container label .buttons .custom{
+    border-style: none;
+    background-color: var(--Very-light-grayish-cyan);
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+main .container form#input .tip-container label .buttons .custom.chosen{
+    border: 2px solid var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+main .container form#input .tip-container label .buttons .custom:hover{
+    border: 2px solid var(--Light-grayish-cyan);
+    border-radius: 3px;
+}
+main .container form#input .tip-container label .buttons .custom::placeholder{
+    color: var(--Very-dark-cyan);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+main .container form#output{
+    background-color: var(--Very-dark-cyan);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    flex: 1; 
+    width:100%;   
+}
+main .container form#output .out-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+main .container form#output .out-style span{
+    display: block;
+}
+main .container form#output .out-style .top-span{
+    color: var(--White);
+}
+main .container form#output .out-style .per{
+    color: var(--Grayish-cyan);
+}
+main .container form#output .out-style output{
+    color: var(--Strong-cyan);
+    font-size: 24px;
+    font-weight: 700;
+}
+main .container form#output #reset{
+    background-color: #086d68;
+    color: #00484B;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 105px;
+    font-size: 20px;
+    font-weight: 700;
+}
+main .container form#output #reset:hover{
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan);
+}
+

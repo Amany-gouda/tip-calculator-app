@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>tip calculator app</title>
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+        <div class="container">
+        <form action="" id="input">
+            <div class="bill-container input-number">
+                <label for="bill" class="labnum">Bill</label>
+                <img src="images/icon-dollar.svg" alt="">
+                <input type="number" name="bill" id="bill" placeholder="0">                
+            </div>
+            <div class="tip-container">
+                <label>
+                    <span>select tip %:</span> 
+                    <div class="buttons">
+                        <input type="button" value="5%" class="btn"> 
+                        <input type="button" value="10%" class="btn">
+                        <input type="button" value="15%" class="btn">
+                        <input type="button" value="25%" class="btn">
+                        <input type="button" value="50%" class="btn">
+                        <input type="number" placeholder="custom" class="custom" id="custom">     
+                    </div>
+                </label>
+            </div>
+            <div class="num-of-people input-number">
+                <label for="num" class="labnum">number of people</label>
+                <img src="images/icon-person.svg" alt="">
+                <input type="number" name="num-of-people" id="num" placeholder="0">     
+            </div>
+
+        </form>
+        <form action="" id="output">
+            <div class="tip out-style">
+                <label for="tip-amount"> 
+                    <span class="top-span">Tip Amount</span> 
+                    <span class="per">/ person</span>  
+                </label>
+                <output id="tip-amount">
+                    $0.00
+                </output>
+            </div>
+
+            <div class="total out-style">
+                <label for="total">  
+                    <span class="top-span">Total</span> 
+                    <span class="per">/ person</span>
+                </label>
+                <output id="total">
+                    $0.00
+                </output>
+            </div>
+
+            <input type="reset" value="Reset" id="reset">
+
+        </form>
+        </div>
+    </main>
+<script src="script.js"></script>
+</body>
+
+</html>
