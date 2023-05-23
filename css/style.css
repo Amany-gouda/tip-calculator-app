@@ -143,12 +143,12 @@ main .container form#input .tip-container label span{
     margin-bottom: 10px;
     display: inline-block;
 }
-main .container form#input .tip-container label .buttons{
+main .container form#input .tip-container .buttons{
     display: grid;
     grid-template-columns: repeat(3,minmax(50px,1fr));
     gap: 10px;
 }
-main .container form#input .tip-container label .buttons .btn{
+main .container form#input .tip-container .buttons .btn{
     border-style: none;
     padding: 5px 15px;
     border-radius: 5px;
@@ -159,36 +159,36 @@ main .container form#input .tip-container label .buttons .btn{
     font-size: 24px;
     font-weight: 700;
 }
-main .container form#input .tip-container label .buttons .btn.activate{
+main .container form#input .tip-container .buttons .btn.activate{
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
 }
-main .container form#input .tip-container label .buttons .btn:hover{
+main .container form#input .tip-container .buttons .btn:hover{
     color: var(--Very-dark-cyan);
     background-color: var(--Light-grayish-cyan);
 }
-main .container form#input .tip-container label .buttons .custom{
+main .container form#input .tip-container .buttons .custom{
     border-style: none;
     background-color: var(--Very-light-grayish-cyan);
-    position: relative;
+    /* position: relative; */
     text-align: center;
     font-size: 18px;
     border-radius: 5px;
 }
-main .container form#input .tip-container label .buttons .custom.chosen{
+main .container form#input .tip-container .buttons .custom.chosen{
     border: 2px solid var(--Strong-cyan);
     color: var(--Very-dark-cyan);
 }
-main .container form#input .tip-container label .buttons .custom:hover{
+main .container form#input .tip-container .buttons .custom:hover{
     border: 2px solid var(--Light-grayish-cyan);
     border-radius: 3px;
 }
-main .container form#input .tip-container label .buttons .custom::placeholder{
+main .container form#input .tip-container .buttons .custom::placeholder{
     color: var(--Very-dark-cyan);
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
 }
 main .container form#output{
     background-color: var(--Very-dark-cyan);
