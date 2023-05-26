@@ -65,6 +65,7 @@ for(let i=0;i<percentage.length;i++){
 customPer.addEventListener("input",()=>{
     if(totalBill.value === ""){
         resetInputs();
+        addZeroAlert();
         return;
     }
     if(numOfPeople.value === "")numOfPeople.value=1;
@@ -74,6 +75,7 @@ customPer.addEventListener("input",()=>{
     tipAmount.innerHTML = ((total*customFloat)/numOfPeople.value).toFixed(2) ;
     totalprice.innerHTML = ((total/numOfPeople.value) + ((total*customFloat)/numOfPeople.value)).toFixed(2);
     removeBtnStyle();
+    removeZeroAlert();
 })
 
 reset.addEventListener("click",resetInputs);
@@ -119,3 +121,5 @@ function removeZeroAlert(){
                 label[1].removeChild(msg); 
             }
 }
+
+let print = num => num;
